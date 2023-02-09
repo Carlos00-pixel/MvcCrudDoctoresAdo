@@ -1,0 +1,20 @@
+﻿@model Doctor
+
+<div style="text-align: center">
+    <a class="btn btn-warning" asp-controller="Doctores" asp-action="Index">Volver a Index</a>
+
+    <ul style="margin-top: 10px; border: 1px solid black" class="list-group">
+        <li class="list-group-item" style="background-color: lightgreen; border: 1px solid black">
+            Id Doctor: @Model.IdDoctor
+        </li>
+        <li class="list-group-item" style="background-color: lightgreen; border: 1px solid black">
+            Apellido: @Model.Apellido
+        </li>
+        <li class="list-group-item" style="background-color: lightgreen; border: 1px solid black">
+            Especialidad: @Model.Especialidad
+        </li>
+        <li class="list-group-item" style="background-color: lightgreen; border: 1px solid black">
+            Salario: @Model.Salario
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,35 @@
+﻿@model List<Doctor>
+
+@{
+    List<Hospital> hospitales = ViewData["HOSPITALES"] as List<Hospital>;
+}
+
+<div style="text-align: center; width: 70%; margin: 0 auto">
+    <h1 style="color: orangered">Lista Doctores</h1>
+    <form method="post">
+        <label>Seleccione un Hospital: </label>
+        <select class="form-select" name="idhospital">
+            @foreach(Hospital hos in hospitales)
+            {
+                <option value="@hos.IdHospital">@hos.Nombre</option>
+            }
+        </select>
+
+        <label>Id Doctor: </label>
+        <input class="form-control" type="number" name="iddoctor" required/>
+
+        <label>Apellido: </label>
+        <input class="form-control" type="text" name="apellido" required/>
+
+        <label>Especialidad: </label>
+        <input class="form-control" type="text" name="especialidad" required/>
+
+        <label>Salario: </label>
+        <input class="form-control" type="number" name="salario" required/>
+
+        <button class="btn btn-outline-success form-control" style="margin-top: 10px;">
+            Create
+        </button>
+    </form>
+
+</div>

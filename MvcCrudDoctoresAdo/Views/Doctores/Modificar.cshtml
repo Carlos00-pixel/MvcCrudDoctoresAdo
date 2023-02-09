@@ -1,0 +1,27 @@
+﻿@model Doctor
+
+<a class="btn btn-dark" asp-controller="Doctores" asp-action="Index">Volver a Index</a>
+
+<div style="text-align: center">
+    <h1>Edit Doctores</h1>
+
+    <form method="post">
+        <input class="form-control" type="hidden" name="iddoctor" value="@Model.IdDoctor"/>
+
+        <label>Id Hospital: </label>
+        <input class="form-control" type="text" name="idhospital" value="@Model.IdHospital" required/>
+
+        <label>Apellido: </label>
+        <input class="form-control" type="text" name="apellido" value="@Model.Apellido" required/>
+
+        <label>Especialidad: </label>
+        <input class="form-control" type="text" name="especialidad" value="@Model.Especialidad" required/>
+
+        <label>Salario: </label>
+        <input class="form-control" type="text" name="salario" value="@Model.Salario" required/>
+
+        <button class="btn btn-outline-danger form-control" style="margin-top: 10px;">
+            Modificar
+        </button>
+    </form>
+</div>
